@@ -8,10 +8,12 @@
     "node": ">=6.13.0"
   },
   "scripts": {
-    "build": "webpack -d --watch",
+    "build": "webpack -p",
     "seed": "node seed.js",
     "test": "jest --forceExit --detectOpenHandles --maxWorkers=10",
-    "start": "node ./server/server.js"
+    "start": "node ./server/server.js",
+    "react-dev": "nodemon ./server/server.js",
+    "webpack-dev": "webpack -d --watch"
   },
   "dependencies": {
     "@babel/preset-env": "^7.4.3",
