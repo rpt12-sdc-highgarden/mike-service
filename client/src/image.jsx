@@ -118,7 +118,7 @@ class Image extends React.Component {
   }
 
   render() {
-    const image = `https://s3.us-east-2.amazonaws.com/highgarden-sdc-goodreads/book-images/${this.props.image}.jpg`
+    const image = `https://s3.us-east-2.amazonaws.com/highgarden-sdc-goodreads/book-images/${this.props.image}.jpg`;
 
     return(
       <PreviewWrapper>
