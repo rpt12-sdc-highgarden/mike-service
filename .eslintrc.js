@@ -11,6 +11,12 @@ module.exports = {
     "eslint:recommended",
     "plugin:react/recommended"
   ],
+  rules: {
+    'react/destructuring-assignment': 'off',
+    'react/prop-types': 'off',
+    'react/jsx-one-expression-per-line': 'off',
+    'no-undef': 'off'
+  },
   env: {
     'commonjs': true,
     'node': true,
