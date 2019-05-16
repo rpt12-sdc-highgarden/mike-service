@@ -5,6 +5,7 @@ describe('Test the root path', () => {
   test('It should GET a well-structured object', (done) => {
     request(app).get('/books/7').then((response) => {
       expect(response.statusCode).toBe(200);
+      console.log('response.body:', response.body);
       expect(response.body).toContainAllKeys([
         'id',
         '__v',
