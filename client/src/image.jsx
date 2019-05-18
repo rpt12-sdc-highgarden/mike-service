@@ -1,6 +1,6 @@
 import StarRatings from 'react-star-ratings';
-
-const { styled } = window;
+import React from 'react';
+import styled from 'styled-components';
 
 const BookCover = styled.img`
   width: 150px;
@@ -118,7 +118,7 @@ class Image extends React.Component {
   }
 
   render() {
-    const image = `https://s3.us-east-2.amazonaws.com/highgarden-sdc-goodreads/book-images/${this.props.image}.jpg`
+    const image = `https://s3.us-east-2.amazonaws.com/highgarden-sdc-goodreads/book-images/${this.props.image}.jpg`;
 
     return(
       <PreviewWrapper>
