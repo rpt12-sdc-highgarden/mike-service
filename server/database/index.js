@@ -140,11 +140,16 @@ const update = (update) => {
   Book.findOneAndUpdate({ id: update.id }, update, () => console.log(`Updated document ${update.id}`));
 };
 
+const remove = (del) => {
+  Book.findOneAndDelete({ id: del.id }, del, () => console.log(`Removed document ${del.id}`));
+};
+
 module.exports = {
   bookSchema,
   seed,
   Book,
   retrieve,
   save,
-  update
+  update,
+  remove
 };
