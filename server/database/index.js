@@ -124,9 +124,24 @@ const seed = (Model, callback) => {
 
 const retrieve = (id, callback) => {
   Book.findOne({ id }, (err, doc) => {
-    // console.log('doc is', doc);
     callback(err, doc);
   });
+};
+
+const save = (book) => {
+  const doc = new Book(book);
+  doc.save()
+    .catch(err => {
+      console.log(err);
+    });
+};
+
+const update = (update) => {
+  Book.findOneAndUpdate({ id: update.id }, update, () => console.log(`Updated document ${update.id}`));
+};
+
+const remove = (del) => {
+  Book.findOneAndDelete({ id: del.id }, del, () => console.log(`Removed document ${del.id}`));
 };
 
 module.exports = {
@@ -134,4 +149,7 @@ module.exports = {
   seed,
   Book,
   retrieve,
+  save,
+  update,
+  remove
 };
