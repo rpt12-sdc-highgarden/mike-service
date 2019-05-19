@@ -124,9 +124,16 @@ const seed = (Model, callback) => {
 
 const retrieve = (id, callback) => {
   Book.findOne({ id }, (err, doc) => {
-    // console.log('doc is', doc);
     callback(err, doc);
   });
+};
+
+const save = (book) => {
+  const doc = new Book(book);
+  doc.save()
+    .catch(err => {
+      console.log(err);
+    });
 };
 
 module.exports = {
@@ -134,4 +141,5 @@ module.exports = {
   seed,
   Book,
   retrieve,
+  save
 };

@@ -24,4 +24,9 @@ app.get('/books/:id', (req, res) => {
   });
 });
 
+app.post('/add', (req, res) => {
+  books.save(req.body);
+  res.status(200).send('Saved!')
+});
+
 module.exports = app;
