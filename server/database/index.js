@@ -136,10 +136,15 @@ const save = (book) => {
     });
 };
 
+const update = (update) => {
+  Book.findOneAndUpdate({ id: update.id }, update, () => console.log(`Updated document ${update.id}`));
+};
+
 module.exports = {
   bookSchema,
   seed,
   Book,
   retrieve,
-  save
+  save,
+  update
 };
