@@ -4,8 +4,9 @@
 
 ## Related Projects
 
-  - https://github.com/rpt12-knightrider/jb-service
-  - https://github.com/rpt12-knightrider/mj-service
+  - https://github.com/rpt12-sdc-highgarden/aarushi-service
+  - https://github.com/rpt12-sdc-highgarden/alyssa-service
+  - https://github.com/rpt12-sdc-highgarden/anait-service
 
 ## Table of Contents
 
@@ -37,14 +38,11 @@ An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
 
 - Node 10.15.3
 
-## API Endpoint
+## API Endpoints
 
-Request:
-```
-GET books/:id
-Content-type: application/json
-```
+### GET /books/:id
 
+Description: Retrieves the book with the provided ID from the database
 Response:
 ```
 {
@@ -94,6 +92,30 @@ Response:
     }
   }
 }
+```
+
+### POST /add
+
+Description: Adds a book to the database
+Response:
+```
+Status 201: "Saved!"
+```
+
+### PUT /update
+
+Description: Updates a book in the database
+Response:
+```
+Status 200: "Updated document 101"
+```
+
+### DELETE /remove
+
+Description: Removes a book in the database
+Response:
+```
+Status 200: "Removed document 101"
 ```
 
 ### Installing Dependencies
