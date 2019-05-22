@@ -58,6 +58,14 @@ const bookSchema = mongoose.Schema({
 
 const Book = mongoose.model('Book', bookSchema);
 
+const genNumber = (num) => {
+  if (num < 200) {
+    return num;
+  } else {
+    return fake.random.number({ min: 0, max: 199 });
+  }
+};
+
 const seed = (Model, callback) => {
   // clean out current database, if any test records clogging up
   Model.deleteMany({}, async () => {
@@ -106,7 +114,7 @@ const seed = (Model, callback) => {
         isbn13: fake.random.number(),
         language: 'English',
       };
-      book.image = 'http://lorempixel.com/480/640/abstract/';
+      book.image = `https://s3.us-east-2.amazonaws.com/highgarden-sdc-goodreads/book-images/${genNumber(i)}.jpg`;
 
       if (i % 2 === 0) {
         book.series = {
