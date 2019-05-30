@@ -15,7 +15,8 @@ module.exports = {
     'react/destructuring-assignment': 'off',
     'react/prop-types': 'off',
     'react/jsx-one-expression-per-line': 'off',
-    'no-undef': 'off'
+    'no-undef': 'off',
+    'no-console': 'off'
   },
   env: {
     'commonjs': true,
