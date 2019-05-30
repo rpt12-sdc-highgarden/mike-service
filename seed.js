@@ -11,7 +11,7 @@ const genNumber = (num) => {
   }
 };
 
-let count = 1;
+let count = 0;
 const seed = () => {
   let queries = [];
   for (let i = 0; i < 100000; i += 1) {
