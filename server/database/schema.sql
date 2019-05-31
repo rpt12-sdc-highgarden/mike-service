@@ -1,7 +1,9 @@
+DROP DATABASE IF EXISTS books;
 CREATE DATABASE books;
 
 USE books;
 
+DROP TABLE IF EXISTS book;
 CREATE TABLE book (
   id INTEGER PRIMARY KEY NOT NULL AUTO_INCREMENT,
   title TEXT NOT NULL,
@@ -27,7 +29,6 @@ CREATE TABLE book (
   alibris TEXT NOT NULL,
   betterWorldBooks TEXT NOT NULL,
   indieBound TEXT NOT NULL,
-  worldcat TEXT NOT NULL,
   book_type TEXT NOT NULL,
   pages INTEGER NOT NULL,
   publishDate DATE NOT NULL,
@@ -35,10 +36,9 @@ CREATE TABLE book (
   originalTitle TEXT NOT NULL,
   isbn INTEGER NOT NULL,
   isbn13 INTEGER NOT NULL,
-  asin TEXT NOT NULL,
   book_language TEXT NOT NULL,
-  series_name TEXT NOT NULL,
-  series_url TEXT NOT NULL
+  series_name TEXT,
+  series_url TEXT
 );
 
 

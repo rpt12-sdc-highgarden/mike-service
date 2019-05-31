@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
-const books = require('./database/index.js');
+const books = require('./database/sqlIndex.js');
 
 const app = express();
 

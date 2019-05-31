@@ -35,8 +35,7 @@ const bookSchema = mongoose.Schema({
       alibris: String,
       betterWorldBooks: String,
       indieBound: String,
-    },
-    worldcat: String,
+    }
   },
   type: String,
   pages: Number,
@@ -46,7 +45,6 @@ const bookSchema = mongoose.Schema({
     originalTitle: String,
     isbn: Number,
     isbn13: Number,
-    asin: String,
     language: String,
     series: {
       name: String,
