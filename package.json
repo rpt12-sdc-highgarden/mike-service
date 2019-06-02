@@ -9,7 +9,7 @@
   },
   "scripts": {
     "build": "webpack -p",
-    "seed": "node sqlSeed.js",
+    "seed": "node seed/sqlSeed.js",
     "test": "jest --forceExit --detectOpenHandles --maxWorkers=10",
     "start": "node ./server/server.js",
     "react-dev": "nodemon ./server/server.js",
