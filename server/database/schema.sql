@@ -5,7 +5,7 @@ USE books;
 
 DROP TABLE IF EXISTS book;
 CREATE TABLE book (
-  id INTEGER PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  id INTEGER PRIMARY KEY NOT NULL,
   title TEXT NOT NULL,
   author TEXT NOT NULL,
   book_description TEXT NOT NULL,
@@ -31,7 +31,7 @@ CREATE TABLE book (
   indieBound TEXT NOT NULL,
   book_type TEXT NOT NULL,
   pages INTEGER NOT NULL,
-  publishDate DATE NOT NULL,
+  publishDate TEXT NOT NULL,
   publisher TEXT NOT NULL,
   originalTitle TEXT NOT NULL,
   isbn INTEGER NOT NULL,
@@ -43,5 +43,5 @@ CREATE TABLE book (
 
 
 /*  Execute this file from the command line by typing:
- *    mysql -u root -p < server/schema.sql
+ *    mysql -u root < server/database/schema.sql
  *  to create the database and the tables.*/
