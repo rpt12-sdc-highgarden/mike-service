@@ -138,6 +138,7 @@ class Description extends React.Component {
   }
 
   render() {
+    console.log('THIS.PROPS=======>', this.props);
     const totalRatings = this.numberWithCommas(this.props.ratings.five + this.props.ratings.four + this.props.ratings.three + this.props.ratings.two + this.props.ratings.one);
     const totalReviews = this.numberWithCommas(this.props.reviews + '');
 
