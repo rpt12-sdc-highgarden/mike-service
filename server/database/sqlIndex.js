@@ -22,7 +22,7 @@ const retrieve = (id, callback) => {
       if (err) {
         console.log('error:', err);
       }
-      callback(err, result);
+      callback(err, result[0]);
     }
   );
 };

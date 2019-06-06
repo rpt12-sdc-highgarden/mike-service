@@ -31,11 +31,44 @@ class App extends React.Component {
         const day = date.toLocaleString('en-us', { day: 'numeric' });
         const year = date.toLocaleDateString('en-us', { year: 'numeric' });
         const publishDate = month + ' ' + day + 'th ' + year;
+        const ratings = {
+          five: book.five,
+          four: book.four,
+          three: book.three,
+          two: book.two,
+          one: book.one
+        };
+        const links = {
+          kindle: book.kindle,
+          amazon: book.amazon,
+          stores: {
+            audible: book.audible,
+            barnesAndNoble: book.barnesAndNoble,
+            walmart: book.walmart,
+            apple: book.apple,
+            google: book.google,
+            abebooks: book.abebooks,
+            bookDesository: book.bookDesository,
+            indigo: book.indigo,
+            alibris: book.alibris,
+            betterWorldBooks: book.betterWorldBooks,
+            indieBound: book.indieBound
+          }
+        };
+        const metadata = {
+          originalTitle: book.originalTitle,
+          isbn: book.isbn,
+          isbn13: book.isbn13,
+          language: book.book_language
+        };
         this.setState({
           book: book,
-          weightedReviews: this.averageReviews(book.ratings),
+          weightedReviews: this.averageReviews({...ratings}),
           publishDate: publishDate,
-          reviewPercents: this.calculateBarWidth(book.ratings)
+          reviewPercents: this.calculateBarWidth({...ratings}),
+          links,
+          metadata,
+          ratings
         });
       });
 
@@ -79,19 +112,19 @@ class App extends React.Component {
   render() {
     return (
       <div style={flexStyle}>
-        <Image image={this.state.book.image} />
+        <Image image={this.state.book.image_url} />
         <Description
           title={this.state.book.title}
-          description={this.state.book.description}
+          description={this.state.book.book_description}
           author={this.state.book.author}
-          ratings={{...this.state.book.ratings}}
+          ratings={{...this.state.ratings}}
           reviews={this.state.book.reviews}
           weightedReviews={this.state.weightedReviews}
-          links={{...this.state.book.links}}
+          links={{...this.state.links}}
           pages={this.state.book.pages}
           publishDate={this.state.publishDate}
           publisher={this.state.book.publisher}
-          metadata={{...this.state.book.metadata}}
+          metadata={{...this.state.metadata}}
           reviewPercents={{...this.state.reviewPercents}}
         />
       </div>
