@@ -53,7 +53,8 @@ class App extends React.Component {
             alibris: book.alibris,
             betterWorldBooks: book.betterWorldBooks,
             indieBound: book.indieBound
-          }
+          },
+          worldcat: book.worldcat
         };
         const metadata = {
           originalTitle: book.originalTitle,

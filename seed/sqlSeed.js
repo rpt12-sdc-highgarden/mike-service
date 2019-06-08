@@ -47,6 +47,7 @@ const newBook = () => {
       alibris: fake.internet.url(),
       betterWorldBooks: fake.internet.url(),
       indieBound: fake.internet.url(),
+      worldcat: fake.internet.url(),
       book_type: fake.random.word(),
       pages: fake.random.number({ max: 3000 }),
       publishDate: fake.date.past(),

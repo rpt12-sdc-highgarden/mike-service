@@ -29,6 +29,7 @@ CREATE TABLE book (
   alibris TEXT NOT NULL,
   betterWorldBooks TEXT NOT NULL,
   indieBound TEXT NOT NULL,
+  worldcat TEXT NOT NULL,
   book_type TEXT NOT NULL,
   pages INTEGER NOT NULL,
   publishDate TEXT NOT NULL,
