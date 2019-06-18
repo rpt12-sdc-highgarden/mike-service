@@ -1,4 +1,4 @@
-const license = process.env.NR_LICENSE;
+const license = require('./license');
 
 'use strict'
 /**

@@ -1,0 +1,56 @@
+config:
+  target: 'http://localhost:3004'
+  phases:
+    - duration: 60
+      arrivalRate: 2
+  http:
+    pool: 6
+scenarios:
+  - flow:
+    - loop:
+      - get:
+          url: '/{{ $randomNumber(0, 10000000) }}/'
+      count: 900
+
+  - flow:
+    - post:
+        url: '/add'
+        json:
+          id: '{{ $randomNumber(0, 10000000) }}'
+          bookTitle: 'Why Your Dogs Head Smells Like Tortillas'
+          title: 'Why Your Dogs Head Smells Like Tortillas'
+          author: 'Rupert Lopez'
+          book_description: 'Uncovering the mystery of why your dogs head smells like a tortilla.'
+          image_url: 'https://s3.us-east-2.amazonaws.com/highgarden-sdc-goodreads/book-images/{{ $randomNumber(0, 199) }}.jpg'
+          five: 468443
+          four: 13156
+          three: 1531
+          two: 484
+          one: 21
+          reviews: 44616456
+          kindle: 'http://kindle.com'
+          amazon: 'http://amazon.com'
+          audible: 'http://audible.com'
+          barnesAndNoble: 'http://barnesAndNoble.com'
+          walmart: 'http://walmart.com'
+          apple: 'http://apple.com'
+          google: 'http://google.com'
+          abebooks: 'http://abebooks.com'
+          bookDesository: 'http://bookDesository.com'
+          indigo: 'http://indigo.com'
+          alibris: 'http://alibris.com'
+          betterWorldBooks: 'http://betterWorldBooks.com'
+          indieBound: 'http://indieBound.com'
+          worldcat: 'http://worldcat.com'
+          book_type: 'Book'
+          pages: 123456
+          publishDate: '2018-10-10'
+          publisher: 'Animal Planet'
+          originalTitle: 'Why Your Dogs Head Smells Like Tortillas'
+          isbn: 5845615
+          isbn13: 5463531
+          book_language: 'English'
+          series_name: 'Dogs'
+          series_url: 'http://dogs.com'
+
+        # Run the test with: artillery run stress-testing/artillery.yml
