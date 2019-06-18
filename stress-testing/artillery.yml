@@ -52,5 +52,6 @@ scenarios:
           book_language: 'English'
           series_name: 'Dogs'
           series_url: 'http://dogs.com'
+    count: 900
 
         # Run the test with: artillery run stress-testing/artillery.yml
