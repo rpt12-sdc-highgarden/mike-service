@@ -6,7 +6,11 @@ const books = require('./database/sqlIndex.js');
 const app = express();
 
 app.use(express.static(path.join(__dirname, '/../client')));
-app.use('/:id', express.static(path.join(__dirname, '/../client')));
+app.use('/:id', () => {
+  if (!__dirname.includes('loaderio-0bca3bd5f5321b11c563878085888865')) {
+    express.static(path.join(__dirname, '/../client'));
+  }
+});
 app.use(bodyParser.json());
 
 app.use(function(req, res, next) {
