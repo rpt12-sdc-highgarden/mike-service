@@ -1,4 +1,4 @@
-const license = require('./license');
+const LICENSE = require('./license');
 
 'use strict'
 /**
@@ -15,7 +15,7 @@ exports.config = {
   /**
    * Your New Relic license key.
    */
-  license_key: license,
+  license_key: process.env.LICENSE || LICENSE,
   logging: {
     /**
      * Level at which to log. 'trace' is most useful to New Relic when diagnosing
