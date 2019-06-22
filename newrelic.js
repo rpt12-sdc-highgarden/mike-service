@@ -1,5 +1,3 @@
-const LICENSE = require('./license');
-
 'use strict'
 /**
  * New Relic agent configuration.
