@@ -21,7 +21,7 @@ class App extends React.Component {
   componentDidMount() {
     const bookId = window.location.pathname.split('/')[1] || 0;
 
-    fetch(`http://18.188.156.228:3004/books/${bookId}`)
+    fetch(`http://18.218.133.93:3004/books/${bookId}`)
       .then((response) => {
         return response.json();
       })
