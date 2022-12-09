@@ -22,7 +22,7 @@
     "dotenv": "^8.0.0",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.12.1",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "faker": "^4.1.0",
     "mongodb": "^3.2.6",
     "mongoose": "^5.4.19",
